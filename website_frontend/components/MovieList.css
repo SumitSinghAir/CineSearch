@@ -1,0 +1,17 @@
+.slide-enter {
+    transform: translateX(100vw);
+  }
+  
+.slide-enter.slide-enter-active {
+    transform: translateX(0);
+    transition: all 500ms ease-in-out;
+}
+
+.slide-leave {
+    transform: translateX(0);
+}
+
+.slide-leave.slide-leave-active {
+    transform: translateX(-100vw);
+    transition: all 500ms ease-in-out;
+}

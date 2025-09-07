@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-zinc-900 h-full overflow-x-hidden;
+}
+
+#__next {
+  @apply h-full;
+}
+
+html {
+  @apply h-full;
+}
+
+.mask-video-gradient{
+  mask-image:linear-gradient(to bottom, #000 70%,#0000 100%);
+}
+
+
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+opacity: 1;
+transition: opacity 150ms ease-in;
+}
+.fade-exit {
+opacity: 1;
+}
+.fade-exit-active {
+opacity: 0;
+transition: opacity 150ms ease-in;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #FFF;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  }
+
+  @keyframes rotation {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+  } 
+
+
+
+  /* range */
+  input[type=range] {
+    filter:hue-rotate(120deg);
+  }
+  select{
+    filter:hue-rotate(120deg);
+  }
+
+
+
+  img {  
+    position: relative;
+  }
+  
+  /* style this to fit your needs */
+  /* and remove [alt] to apply to all images*/
+  img[alt]:after {  
+    @apply absolute inset-0 grid place-items-center bg-neutral-700 text-white font-bold p-2;
+    font-size:2vw;
+    text-align:center;
+    content: attr(alt);
+  }
+
+
+  /* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+body[data-scroll="show"]::-webkit-scrollbar  {
+  
+  width:5px;
+}
+body[data-scroll="hidden"]::-webkit-scrollbar {
+  width:0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: black; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: red; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: white; 
+}
